@@ -8,8 +8,9 @@ if (storedTheme === 'dark') {
 
 function updateThemeLabel() {
   const isDark = root.dataset.theme === 'dark';
-  themeToggle.textContent = isDark ? 'Light mode' : 'Dark mode';
-  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  const nextThemeLabel = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+  themeToggle.setAttribute('aria-label', nextThemeLabel);
+  themeToggle.setAttribute('title', nextThemeLabel);
 }
 
 updateThemeLabel();
